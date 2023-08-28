@@ -5,6 +5,15 @@ import jakarta.validation.constraints.Size;
 
 public class LoginForm {
 
+    public LoginForm(){
+
+    }
+
+    public LoginForm(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
+
     @NotNull
     @Size(min = 6, message = "Username must be at least 6 characters long")
     private String username;
